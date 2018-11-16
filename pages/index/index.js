@@ -40,6 +40,8 @@ Page({
         _this.setData({
           swiperHeight: height
         });
+        app.globalData.pr = res.pixelRatio;
+        app.windowWidth = res.windowWidth;
       }
     });
   },

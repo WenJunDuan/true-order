@@ -1,2 +1,10 @@
-<!--pages/foods/foods.wxml-->
-<text>pages/foods/foods.wxml</text>
+<view>
+  <view class='list-wrapper'>
+    <scroll-view class='menu'>
+      <view wx:for='{{menuList}}' wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='clickMenu' class="menu-item {{item.id == '003' ? 'active': ''}}">
+        {{item.menuName}}
+      </view>
+    </scroll-view>
+    <scroll-view class='food'></scroll-view>
+  </view>
+</view>
